@@ -1,6 +1,6 @@
 {
-    "name": "bolt/bolt-extension-starter",
-    "description": "",
+    "name": "enthus1ast/PubMed",
+    "description": "Fetch publications from PubMed",
     "type": "bolt-extension",
     "keywords": [
     ],
@@ -13,25 +13,25 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "",
-            "email": "you@example.com"
+            "name": "enthus1ast",
+            "email": "david@code0.xyz"
         }
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\YourName\\ExtensionName\\": "src"
+            "Bolt\\Extension\\enthus1ast\\PupMed\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bolt\\Extension\\YourName\\ExtensionName\\Tests\\": "tests",
+            "Bolt\\Extension\\enthus1ast\\PupMed\\Tests\\": "tests",
             "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
         }
     },
     "extra": {
         "bolt-assets": "web",
-        "bolt-class": "Bolt\\Extension\\YourName\\ExtensionName\\ExtensionNameExtension"
+        "bolt-class": "Bolt\\Extension\\enthus1ast\\PupMed\\PubMedExtension"
     }
 }
