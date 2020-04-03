@@ -11,4 +11,14 @@ use Bolt\Extension\SimpleExtension;
  */
 class PupMedExtension extends SimpleExtension
 {
+  // protected function registerTwigFunctions() {
+  //   return [
+  //     'pubmed_search' => 'pubmedSearch'
+  //   ];
+  // }
+
+  // public function pubmedSearch() {
+  //   // return ["foo", "baa"];
+  //   return "foo";
+  // }
 }
