@@ -18,7 +18,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "prefer-stable": true,
+    "prefer-stable": false,
     "autoload": {
         "psr-4": {
             "Bolt\\Extension\\enthus1ast\\PupMed\\": "src"
