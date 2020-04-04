@@ -315,14 +315,14 @@ class PubMedExtension extends SimpleExtension
     ];
   }
 
-  protected function registerTwigPaths() {
-      return [
-          'templates/' => ['namespace' => 'PubMed']
-          // 'templates/'
-          // 'templates/other'   => ['namespace' => 'Koala'],
-          // 'templates/special' => ['namespace' => 'DropBear', 'position' => 'prepend'],
-      ];
-  }
+  // protected function registerTwigPaths() {
+  //     return [
+  //         'templates/' => ['namespace' => 'PubMed']
+  //         // 'templates/'
+  //         // 'templates/other'   => ['namespace' => 'Koala'],
+  //         // 'templates/special' => ['namespace' => 'DropBear', 'position' => 'prepend'],
+  //     ];
+  // }
 
   public function pubmedSearch($term) {
     $PubMedAPI = new PubMedAPI();
@@ -330,10 +330,10 @@ class PubMedExtension extends SimpleExtension
     return $results;
   }
 
-  public function pubmedSearchTemplate($term) {
-    $PubMedAPI = new PubMedAPI();
-    $results = $PubMedAPI->query($term, false);
-    return $this->renderTemplate('boring.twig'); #, $context);
-  }
+  // public function pubmedSearchTemplate($term) {
+  //   $PubMedAPI = new PubMedAPI();
+  //   $results = $PubMedAPI->query($term, false);
+  //   return $this->renderTemplate('boring.twig'); #, $context);
+  // }
 
 }
