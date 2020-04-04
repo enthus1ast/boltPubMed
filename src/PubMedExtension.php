@@ -314,6 +314,15 @@ class PubMedExtension extends SimpleExtension
     ];
   }
 
+  protected function registerTwigPaths() {
+      return [
+          'templates/' => ['namespace' => 'PubMed']
+          // 'templates/'
+          // 'templates/other'   => ['namespace' => 'Koala'],
+          // 'templates/special' => ['namespace' => 'DropBear', 'position' => 'prepend'],
+      ];
+  }
+
   public function pubmedSearch($term) {
     $PubMedAPI = new PubMedAPI();
     $results = $PubMedAPI->query($term, false);
