@@ -3,11 +3,11 @@
 <p><strong>Publications from PubMed: {{publications | length}}</strong></p>
 
 {% for entry in publications %}
-  {{ entry.authors | join(", ") }}
+  {{ entry.authors | join(", ") }}.
   <i>{{entry.title}}</i>
   <strong>
     {{entry.journalabbrev}}
-    {{entry.year}}
+    {{entry.year}}.
   </strong>
 
   {{entry.volume}}
