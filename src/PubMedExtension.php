@@ -310,7 +310,8 @@ class PubMedExtension extends SimpleExtension
 {
   protected function registerTwigFunctions() {
     return [
-      'pubmed_search' => 'pubmedSearch'
+      'pubmed_search' => 'pubmedSearch',
+      'pubmed_search_template' => 'pubmedSearchTemplate'
     ];
   }
 
@@ -328,4 +329,11 @@ class PubMedExtension extends SimpleExtension
     $results = $PubMedAPI->query($term, false);
     return $results;
   }
+
+  public function pubmedSearchTemplate($term) {
+    $PubMedAPI = new PubMedAPI();
+    $results = $PubMedAPI->query($term, false);
+    return $this->renderTemplate('boring.twig'); #, $context);
+  }
+
 }

@@ -1,5 +1,5 @@
 {
-    "name": "enthus1ast/PubMed",
+    "name": "enthus1ast/pubmed",
     "description": "Fetch publications from PubMed",
     "type": "bolt-extension",
     "keywords": [
@@ -21,17 +21,17 @@
     "prefer-stable": false,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\enthus1ast\\PubMed\\": "src"
+            "Bolt\\Extension\\enthus1ast\\pubmed\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bolt\\Extension\\enthus1ast\\PubMed\\Tests\\": "tests",
+            "Bolt\\Extension\\enthus1ast\\pubmed\\Tests\\": "tests",
             "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
         }
     },
     "extra": {
         "bolt-assets": "web",
-        "bolt-class": "Bolt\\Extension\\enthus1ast\\PubMed\\PubMedExtension"
+        "bolt-class": "Bolt\\Extension\\enthus1ast\\pubmed\\PubMedExtension"
     }
 }
