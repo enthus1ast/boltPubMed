@@ -311,7 +311,7 @@ class PubMedExtension extends SimpleExtension
   protected function registerTwigFunctions() {
     return [
       'pubmed_search' => 'pubmedSearch',
-      'pubmed_search_template' => 'pubmedSearchTemplate'
+      'pubmed_search_template' => ['pubmedSearchTemplate', ['is_safe' => ['html']]]
     ];
   }
 
