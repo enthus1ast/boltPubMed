@@ -1,4 +1,4 @@
-{% set term = "Muller S AND (SUMO OR PML OR Glycerolphosphate) NOT (Bachmair A OR Kögl M OR Heinzel T OR Kieffer Y)" %}
+{# {% set term = "Muller S AND (SUMO OR PML OR Glycerolphosphate) NOT (Bachmair A OR Kögl M OR Heinzel T OR Kieffer Y)" %} #}
 {% set publications = pubmed_search(term) %}
 <p><strong>Publications from PubMed: {{publications | length}}</strong></p>
 

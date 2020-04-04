@@ -333,7 +333,8 @@ class PubMedExtension extends SimpleExtension
   public function pubmedSearchTemplate($term) {
     $PubMedAPI = new PubMedAPI();
     $results = $PubMedAPI->query($term, false);
-    return $this->renderTemplate('boring.twig'); #, $context);
+    $context = ["term" => $term];
+    return $this->renderTemplate('boring.twig', $context);
   }
 
 }
