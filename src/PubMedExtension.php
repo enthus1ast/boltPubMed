@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\enthus1ast\PupMed;
+namespace Bolt\Extension\enthus1ast\PubMed;
 
 use Bolt\Extension\SimpleExtension;
 
