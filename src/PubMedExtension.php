@@ -330,10 +330,10 @@ class PubMedExtension extends SimpleExtension
     return $results;
   }
 
-  // public function pubmedSearchTemplate($term) {
-  //   $PubMedAPI = new PubMedAPI();
-  //   $results = $PubMedAPI->query($term, false);
-  //   return $this->renderTemplate('boring.twig'); #, $context);
-  // }
+  public function pubmedSearchTemplate($term) {
+    $PubMedAPI = new PubMedAPI();
+    $results = $PubMedAPI->query($term, false);
+    return $this->renderTemplate('boring.twig'); #, $context);
+  }
 
 }
