@@ -1,5 +1,5 @@
 {
-    "name": "enthus1ast/pubmed",
+    "name": "enthus1ast/PubMed",
     "description": "Fetch publications from PubMed",
     "type": "bolt-extension",
     "version": "0.0.1",
