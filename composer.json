@@ -22,17 +22,17 @@
     "prefer-stable": false,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\enthus1ast\\pubmed\\": "src"
+            "Bolt\\Extension\\enthus1ast\\PubMed\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bolt\\Extension\\enthus1ast\\pubmed\\Tests\\": "tests",
+            "Bolt\\Extension\\enthus1ast\\PubMed\\Tests\\": "tests",
             "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
         }
     },
     "extra": {
         "bolt-assets": "web",
-        "bolt-class": "Bolt\\Extension\\enthus1ast\\pubmed\\PubMedExtension"
+        "bolt-class": "Bolt\\Extension\\enthus1ast\\PubMed\\PubMedExtension"
     }
 }
