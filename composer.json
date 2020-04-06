@@ -17,7 +17,7 @@
             "email": "david@code0.xyz"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": false,
     "autoload": {
         "psr-4": {
