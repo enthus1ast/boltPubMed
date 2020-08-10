@@ -1,6 +1,6 @@
 {# {% set term = "Muller S AND (SUMO OR PML OR Glycerolphosphate) NOT (Bachmair A OR Kögl M OR Heinzel T OR Kieffer Y)" %} #}
 {% set publications = pubmed_search(term) %}
-<p><strong>Publications from PubMed: {{publications | length}}</strong></p>
+<div><strong>Publications from PubMed: {{publications | length}}</strong></div><br>
 
 {% for entry in publications %}
   {{ entry.authors | join(", ") }}.
@@ -20,5 +20,6 @@
 
   <a target="_blank" href="http://www.ncbi.nlm.nih.gov/pubmed/{{entry.pmid}}">Link</a><br>
 
+  <br>
   <br>
 {% endfor %}
