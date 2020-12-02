@@ -1,0 +1,9 @@
+Could not display publications, try again later.<br>
+Sorry for this.
+{% if user %}
+  <br>
+  Error message (because you're logged in):<br>
+<pre>
+{{error}}
+</pre>
+{% endif %}

@@ -315,26 +315,26 @@ class PubMedExtension extends SimpleExtension
     ];
   }
 
-  // protected function registerTwigPaths() {
-  //     return [
-  //         'templates/' => ['namespace' => 'PubMed']
-  //         // 'templates/'
-  //         // 'templates/other'   => ['namespace' => 'Koala'],
-  //         // 'templates/special' => ['namespace' => 'DropBear', 'position' => 'prepend'],
-  //     ];
-  // }
-
   public function pubmedSearch($term) {
-    $PubMedAPI = new PubMedAPI();
-    $results = $PubMedAPI->query($term, false);
-    return $results;
+    try {
+      $PubMedAPI = new PubMedAPI();
+      $results = $PubMedAPI->query($term, false);
+      return $results;
+    } catch(\Exception | \RuntimeError $ex) {
+      return []; // TODO inform the user about this error somehow
+    }
   }
 
   public function pubmedSearchTemplate($term) {
-    $PubMedAPI = new PubMedAPI();
-    $results = $PubMedAPI->query($term, false);
-    $context = ["term" => $term];
-    return $this->renderTemplate('boring.twig', $context);
+    try {
+      $PubMedAPI = new PubMedAPI();
+      $results = $PubMedAPI->query($term, false);
+      $context = ["term" => $term, "publications" => $results];
+      $result = $this->renderTemplate('boring.twig', $context);
+      return $result;
+    } catch (\Exception | \RuntimeError $ex) {
+      $context = ["term" => $term, "publications" => [], "error" => $ex];
+      return $this->renderTemplate('pubmederror.twig', $context);
+    }
   }
-
 }
