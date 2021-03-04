@@ -5,16 +5,17 @@
 {% endif %}
 <div><strong>Publications from PubMed: {{publications | length}}</strong></div><br><br>
 
+
+
+
 {% for entry in publications %}
-  {% for author in entry.authors | slice(0, count) %}
-    {{author}} {% if not loop.last %},{% endif %}
-  {% endfor %}
-
-  {# et al. for larger authors list #}
-  {% if (entry.authors | length) > count %}
-et al.
+  {% if (entry.authors | length) >= count %}
+    {% set etal = ", et al." %}
+  {% else %}
+    {% set etal = "" %}
   {% endif %}
-
+  {% for author in entry.authors | slice(0, count) %}
+    {{author}}{% if not loop.last %},{% endif %}{% endfor %}{{etal}}
   {# {{ entry.authors | join(", ") }}. #}
   <i>{{entry.title}}</i>
   <strong>
