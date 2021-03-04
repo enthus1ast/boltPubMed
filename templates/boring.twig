@@ -1,9 +1,21 @@
 {# {% set term = "Muller S AND (SUMO OR PML OR Glycerolphosphate) NOT (Bachmair A OR Kögl M OR Heinzel T OR Kieffer Y)" %} #}
 {% set publications = pubmed_search(term) %}
+{% if not count %}
+ {% set count = 25 %}
+{% endif %}
 <div><strong>Publications from PubMed: {{publications | length}}</strong></div><br><br>
 
 {% for entry in publications %}
-  {{ entry.authors | join(", ") }}.
+  {% for author in entry.authors | slice(0, count) %}
+    {{author}} {% if not loop.last %},{% endif %}
+  {% endfor %}
+
+  {# et al. for larger authors list #}
+  {% if (entry.authors | length) > count %}
+    et al.
+  {% endif %}
+
+  {# {{ entry.authors | join(", ") }}. #}
   <i>{{entry.title}}</i>
   <strong>
     {{entry.journalabbrev}}
