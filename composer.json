@@ -2,7 +2,7 @@
     "name": "enthus1ast/pubmed",
     "description": "Fetch publications from PubMed",
     "type": "bolt-extension",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "keywords": [
     ],
     "require": {
